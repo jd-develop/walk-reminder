@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-# Idéalement : ce programme est appelé une fois toutes les dix minutes, affichant un popup pour l'utilisateur
+import time
 import platform
 import os
 import sys
@@ -21,3 +21,10 @@ def notify(msg: str = "eyes from screen"):
         sys.exit()
 
     os.system(command)
+
+
+while True:
+    time.sleep(5 * 60)
+    notify()
+    time.sleep(5 * 60)
+    notify("walk")
